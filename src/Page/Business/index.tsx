@@ -5,15 +5,15 @@ import dayjs from 'dayjs'
 import LoadingSpinner from "../../Component/Loading";
 
 
-const AutomobilesPage: React.FunctionComponent = () => {
+const BusinessPage: React.FunctionComponent = () => {
 const [dataArticle, setDataArticle] = useState<any>()
 const [isLoading, setIsLoading] = useState<boolean>(false);
 
 useEffect(()=>{
     const fetchData = async () =>{
         try {
-          setIsLoading(true);
-            const data = await ApiSection('Automobiles');
+          setIsLoading(true)
+            const data = await ApiSection('Business');
             const xmlData = data.data
             xml2js.parseString(xmlData, (err, result) => {
               if (err) {
@@ -25,7 +25,7 @@ useEffect(()=>{
             });
         } catch (error) {
             console.log('ERROR:', error)
-        }finally {
+        }finally{
           setIsLoading(false)
         }
     }
@@ -33,7 +33,7 @@ useEffect(()=>{
 },[])
   return (
     <div className="m-10 mr-28">
-         {isLoading && <LoadingSpinner />}
+        {isLoading && <LoadingSpinner />}
     {
       dataArticle &&  dataArticle?.map((data:any)=>{
             return (
@@ -52,4 +52,4 @@ useEffect(()=>{
   )
 };
 
-export default AutomobilesPage;
+export default BusinessPage;

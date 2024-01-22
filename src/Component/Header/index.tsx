@@ -8,14 +8,14 @@ const navigation = [
     { name: "Home", href: "/", value: "home" },
     { name: "Arts", href: "/arts", value: "arts" },
     { name: "Automobiles", href: "/automobiles", value: "automobiles" },
-    { name: "Food", href: "/food", value: "food" },
-    { name: "Fashion", href: "/fashion", value: "fashion"}
+    { name: "Business", href: "/Business", value: "Business" },
+    { name: "Economy", href: "/Economy", value: "Economy"}
   ];
 const HeaderMain: React.FunctionComponent = () => {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   return (
     <div>
-    <header className="absolute inset-x-0 top-0 z-50">
+    <header className="absolute inset-x-0 top-0 z-50 mx-20 mt-10">
       <nav
         className="p-6 lg:px-8"
         aria-label="Global"
