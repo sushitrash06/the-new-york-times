@@ -82,6 +82,7 @@ const handlePrevPage = () => {
                 )
             })
         }
+        
            <PaginationComponent
         currentPage={currentPage}
         totalPages={totalPages}

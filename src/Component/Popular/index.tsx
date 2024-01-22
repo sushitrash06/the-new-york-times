@@ -22,7 +22,7 @@ useEffect(()=>{
 },[])
 
   return (
-    <div className="w-2/5 overflow-hidden inline-block">
+    <div className="lg:w-2/5 md:w-2/5 overflow-hidden inline-block">
       <p className="font-bold text-xl m-4">Popular Article</p>
       <div className="max-h-screen h-screen overflow-y-scroll">
       {

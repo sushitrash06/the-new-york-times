@@ -5,9 +5,9 @@ import { Router } from './routes';
 
 function App() {
   return (
-    <div className="App mt-40 mx-24">
+    <div className="App lg:mt-40 mt-28 lg:mx-24 md:mx-24 mx-5">
       <HeaderMain/>
-      <div className='flex'>
+      <div className='lg:flex md:flex'>
       <Router/>
       <PopularComponent/>
       </div>

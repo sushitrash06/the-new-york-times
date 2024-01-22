@@ -15,7 +15,7 @@ const Pagination: React.FC<PaginationProps> = ({
   onPrevPage,
 }) => {
   return (
-    <div className="flex justify-between">
+    <div className="flex justify-between p-5">
       <div>
         <span>{`Page ${currentPage} of ${totalPages}`}</span>
       </div>

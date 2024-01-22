@@ -19,7 +19,6 @@ useEffect(()=>{
               if (err) {
                 console.error('Error parsing XML:', err);
               } else {
-                // Set the JSON data in the state
                 setDataArticle(result && result.rss?.channel[0].item);
               }
             });
@@ -32,15 +31,16 @@ useEffect(()=>{
     fetchData()
 },[])
   return (
-    <div className="m-10 mr-28">
+    <div className="lg:m-10 md:m-10 lg:mr-28 md:mr-28">
        {isLoading && <LoadingSpinner />}
+       <h1 className="text-4xl ml-10 font-bold">Economy</h1>
     {
       dataArticle &&  dataArticle?.map((data:any)=>{
             return (
                 <div className="m-3 w-full border-b-2">
                     <div className={'p-5 rounded m-2'}>
                       <b>{data?.title[0]}</b>
-                      <p>{data?.description[0]}</p>
+                      <p>{data?.description[0]} <a className="text-blue-500" href={data?.link[0]}>see more</a></p>
                       <p className="text-sm text-gray-500 bg-slate-300 p-2 w-fit rounded-xl">{data && data['dc:creator']?.[0]}</p>
                       <span className="text-xs text-gray-500">{dayjs(data?.pubDate[0]).format('DD-MMMM-YYYY HH:mm')}</span>
                     </div>
