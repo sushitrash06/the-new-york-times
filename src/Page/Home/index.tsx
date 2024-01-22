@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import {ApiSearch} from '../../Api'
+import {ApiSearch, ApiSection} from '../../Api'
 import Card from "../../Component/Card/Index";
 
 interface dataResponseType {
