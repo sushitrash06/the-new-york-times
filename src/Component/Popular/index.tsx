@@ -4,7 +4,8 @@ import Card from "../../Component/Card/Index";
 
 interface dataResponseType {
     title: string,
-    abstract: string
+    abstract: string,
+    url: string
 }
 
 const PopularComponent: React.FunctionComponent = () => {
@@ -32,6 +33,7 @@ useEffect(()=>{
                         <Card
                             title={data.title}
                             abstract={data.abstract}
+                            url={data.url}
                         />
                     </div>
                 )
